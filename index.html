@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>2016專題式網頁</title>
+	<style>
+		html{
+			background-image: url('image/background.jpg');
+			width: 100%;
+			height: 100%;
+		}
+		img{
+			max-width: 100%;
+		}
+		nav{
+			position: sticky;
+			top:  -1px;
+			/*要設定其中一邊position才會有效*/
+			margin: 0;
+			padding: 0px;
+			max-width: 100%;
+		}
+		nav>ul{
+			list-style-type: none;
+			padding: 10px 0px;
+			display: flex;
+			flex-direction: row;
+			jsutify-content: space-around;
+			background-color: #162662;
+		}
+		nav>ul>li{
+			margin: 0px 10px;
+		}
+		ol>li{
+			list-style-type: none;
+			padding: 0px;
+		}
+		#menu1, #menu2, #menu3, #menu4, #menu5, #menu6 {
+			display: none;
+		}
+		button{
+			margin: 0;
+			padding: 0;
+			border: 1px solid transparent;
+			outline: none;
+			color: white;
+			background-color: #162662;
+		}
+		section{
+			margin: 0% 15%;
+			text-align:center;
+		}
+		footer{
+			color: gray;
+			text-align: right;
+		}
+		h1{
+			mso-margin-top-alt:auto;
+			margin-bottom:4.5pt;
+			text-align:center;
+			line-height:300%;
+			mso-outline-level:2;
+		}
+		h1>b{
+			mso-bidi-font-weight:normal;
+			font-size:36.0pt;
+			line-height:300%;
+			font-family:標楷體;
+			color:#BDD7EE;
+			mso-themecolor:accent1;
+			mso-themetint:102;
+	    	mso-style-textfill-fill-color:#BDD7EE;
+	    	mso-style-textfill-fill-themecolor:accent1;
+	    	mso-style-textfill-fill-alpha:100.0%;
+	    	mso-style-textfill-fill-colortransforms:"lumm=40000 lumo=60000"
+		}
+		p{
+			text-align:center;
+			line-height:300%;
+			mso-outline-level:2;
+			font-size:18.0pt;
+			mso-bidi-font-size:12.0pt;
+			line-height:300%;
+			font-family:標楷體;
+			color:white;
+			align-content: center;
+		}
+		@font-face{
+			font-family:標楷體;
+			panose-1:3 0 5 9 0 0 0 0 0 0;
+			mso-font-charset:136;
+			mso-generic-font-family:script;
+			mso-font-pitch:fixed;
+			mso-font-signature:3 135135232 22 0 1048577 0;
+		}
+	</style>
+	
+</head>
+<body>
+	<header>
+		<a href="index.html"><img src="image/top.jpg" alt="網站主題：古董是蝦米"></a>
+		
+	</header>
+	<nav>
+		<ul>
+			<li>
+				<img src="image/nav1.jpg" alt="段落標題：風流千古，此段內容介紹建國古董商圈周遭環境" id='topic1'>
+				<ol id='menu1'>
+					<li><button type='button' onclick='loadDoc("web11.html")'>1-1大安區</button></li>
+					<li><button type='button' onclick='loadDoc("web12.html")'>1-2大安森林公園</button></li>
+					<li><button type='button' onclick='loadDoc("web13.html")'>1-3師大夜市</button></li>
+					<li><button type='button' onclick='loadDoc("web14.html")'>1-4永康街</button></li>
+					<li><button type='button' onclick='loadDoc("web15.html")'>1-5建國假日花市</button></li>
+				</ol>
+			</li>
+			<li>
+				<img src="image/nav2.jpg" alt="段落標題：古色古香，此段內容依店家所販售之古董，為建國商圈簡易分類" id='topic2'>
+				<ol id='menu2'>
+					<li><button type='button' onclick='loadDoc("web21.html")'>2-1青銅器</button></li>
+					<li><button type='button' onclick='loadDoc("web22.html")'>2-2玉器</button></li>
+					<li><button type='button' onclick='loadDoc("web23.html")'>2-3書法/水墨畫</button></li>
+					<li><button type='button' onclick='loadDoc("web24.html")'>2-4陶瓷</button></li>
+					<li><button type='button' onclick='loadDoc("web25.html")'>2-5雜項</button></li>
+					<li><button type='button' onclick='loadDoc("web26.html")'>2-6訪問</button></li>
+				</ol>
+			</li>
+			<li>
+				<img src="image/nav3.jpg" alt="段落標題：亙古亙今，簡介台北各大古董商圈" id='topic3'>
+				<ol id='menu3'>
+					<li><button type='button' onclick='loadDoc("web31.html")'>3-1發展脈絡</button></li>
+					<li><button type='button' onclick='loadDoc("web32.html")'>3-2光華古董商圈</button></li>
+					<li><button type='button' onclick='loadDoc("web33.html")'>3-3三普古董商圈</button></li>
+					<li><button type='button' onclick='loadDoc("web34.html")'>3-4大都會商圈</button></li>
+					<li><button type='button' onclick='loadDoc("web35.html")'>3-5建國古董商圈</button></li>
+				</ol>
+			</li>
+			<li>
+				<img src="image/nav4.jpg" alt="段落標題：刁鑽古怪，簡介各古董" id='topic4'>
+				<ol id='menu4'>
+					<li><button type='button' onclick='loadDoc("web41.html")'>4-1青銅器</button></li>
+					<li><button type='button' onclick='loadDoc("web42.html")'>4-2玉器</button></li>
+					<li><button type='button' onclick='loadDoc("web43.html")'>4-3書法/水墨畫</button></li>
+					<li><button type='button' onclick='loadDoc("web44.html")'>4-4陶瓷</button></li>
+					<li><button type='button' onclick='loadDoc("web45.html")'>4-5雜項</button></li>
+				</ol>
+			</li>
+			<li>
+				<img src="image/nav5.jpg" alt="段落標題：通古博今，台北市博物館介紹及探訪" id='topic5'>
+				<ol id='menu5'>
+					<li><button type='button' onclick='loadDoc("web51.html")'>5-1故宮博物院簡介</button></li>
+					<li><button type='button' onclick='loadDoc("web52.html")'>5-2故宮博物院心得</button></li>
+					<li><button type='button' onclick='loadDoc("web53.html")'>5-3歷史博物館簡介</button></li>
+					<li><button type='button' onclick='loadDoc("web54.html")'>5-4歷史博物館心得</button></li>
+				</ol>
+			</li>
+			<li>
+				<img src="image/nav6.jpg" alt="段落標題：古貌古心，團隊參賽企劃" id='topic6'>
+				<ol id='menu6'>
+					<li><button type='button' onclick='loadDoc("web61.html")'>6-1計畫總覽</button></li>
+					<li><button type='button' onclick='loadDoc("web62.html")'>6-2計畫要素</button></li>
+					<li><button type='button' onclick='loadDoc("web63.html")'>6-3團隊介紹</button></li>
+				</ol>
+			</li>
+		</ul>
+	</nav>
+	<main>
+	    <article id='change'>
+	    	<h1><b>前言</b></h1>
+	    	<section>
+	    		<img src="image/0-0.jpg" alt="專題製作相關活動照片">
+	    		<p>曾經，古董對我們而言好似是另一個世界的事物，非常的陌生，如今，古董和我們不再有遙不可及的距離，不再只是一個冷冰冰的名詞，而是代表著經濟起飛最蓬勃發展的一段時光，象徵著歷史的變遷，更記錄了先人的各種故事。每個古董文物中都藏了一段回憶，這些記憶訴說著先人的生活點滴。往後，我們也會繼續一步步的發掘尚未與我們相遇的動人故事，讓在這片土地上那默默耕耘的一群發揚光大，將他們每一步的努力都寫成最動人且真實的傳奇故事，讓人民往後的每一代都知道先人曾經的努力。而我，在這次的活動中，不僅看見了先人的努力，對於充實自我更有了極大的突破，過去我們不但不瞭解古董，也沒有讓我想去了解先人心路歷程的動力，但在這次的過程中使我去翻閱一本名為古董的史集，讓我們找到由古董串連成的知識泉源，知道了古董是瞎米，開始了我們對世界上所有事物的探索之旅。</p>
+	    	</section>
+	    </article>
+	    <aside></aside>
+	</main>
+	<footer>
+	    原始素材取自專題式網頁競賽
+	</footer>
+	<script>
+		function main(a,b) {
+			
+			var papa = a;
+			var kid = b;
+			papa.addEventListener('click', check);
+
+			function check() {
+				if (kid.style.display == 'inline') {
+					kid.style.display = 'none';
+					console.log(kid.style.display);
+				} else {
+					kid.style.display = 'inline';
+					console.log('bye');
+				};
+			};
+		};
+
+		let sec1 = new main(document.getElementById('topic1'), document.getElementById('menu1'));
+		let sec2 = new main(document.getElementById('topic2'), document.getElementById('menu2'));
+		let sec3 = new main(document.getElementById('topic3'), document.getElementById('menu3'));
+		let sec4 = new main(document.getElementById('topic4'), document.getElementById('menu4'));
+		let sec5 = new main(document.getElementById('topic5'), document.getElementById('menu5'));
+		let sec6 = new main(document.getElementById('topic6'), document.getElementById('menu6'));
+
+		function loadDoc(link) {
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById('change').innerHTML = this.responseText;
+				}
+			};
+			xmlhttp.open('GET', link, true);
+			xmlhttp.send();
+		};
+		
+		
+	</script>
+</body>
+</html>
